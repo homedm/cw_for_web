@@ -1087,3 +1087,11 @@ export default class cw {
     stopMorse = () => { this.oscNode.stop(this.context.currentTime); }
 }
 
+// モールス符号の再生を途中停止する。
+const stopMorse = (t) => { oscNode.stop(t); }
+
+// for tooltip by bootstrap and propper.js
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
